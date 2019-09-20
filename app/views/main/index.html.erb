@@ -1104,14 +1104,14 @@ document.getElementById("finishbtn").onclick = function(){
     txt.innerHTML = "real: " + realZ + "<br>"
                   + "imaginary: " + imaginaryZ ;
 
-                  imaginaryX = new Array(realZ.length);
-                  imaginaryX.fill(0);
-                  originalX = realZ.slice(0); 
-                  fftZ.calc(1, realZ, imaginaryX)
-                  var phase = fftZ.phase(realZ, imaginaryX);
-                  var frequencies = fftZ.frequencies(realZ, imaginaryX, 1); //周波数
-                  var amplitude = fftZ.amplitude(realZ, imaginaryX); //振幅
-                  var periods = fftZ.periods(realZ, imaginaryX, 1);
+                  imaginaryZ = new Array(realZ.length);
+                  imaginaryZ.fill(0);
+                  originalZ = realZ.slice(0); 
+                  fftZ.calc(1, realZ, imaginaryZ)
+                  var phase = fftZ.phase(realZ, imaginaryZ);
+                  var frequencies = fftZ.frequencies(realZ, imaginaryZ, 1); //周波数
+                  var amplitude = fftZ.amplitude(realZ, imaginaryZ); //振幅
+                  var periods = fftZ.periods(realZ, imaginaryZ, 1);
                   console.log(frequencies)
                   console.log(amplitude)
               
