@@ -10,7 +10,6 @@ $(function($) {
     $(document).on("click", "#start", function () {
         aZ = 0;
         realZ = [],  imaginaryZ = [];
-        fftZ = new FFT();
         window.addEventListener("devicemotion", (dat) => {
         aZ = dat.acceleration.z; 
         })
