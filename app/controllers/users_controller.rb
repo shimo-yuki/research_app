@@ -4,6 +4,7 @@ class UsersController < ApplicationController
         user = User.new
         user.datas = params[:datas]
         user.ffts = params[:ffts]
+        binding.pry
         user.save
         user.name = user.id
         user.save
