@@ -4,8 +4,8 @@ class UsersController < ApplicationController
         user = User.new
         user.datas = params[:datas]
         user.ffts = params[:ffts]
-         biniding.pry
         user.save
+        console.log
         user.name = user.id
         user.save
         redirect_to user_path(user)
