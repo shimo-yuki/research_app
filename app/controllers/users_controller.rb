@@ -1,5 +1,10 @@
 class UsersController < ApplicationController
 
+    def index
+        @users = User.all
+        @user_arr = @users.to_json.html_safe
+        
+    end
     def create
         user = User.new
         user.datas = params[:datas]

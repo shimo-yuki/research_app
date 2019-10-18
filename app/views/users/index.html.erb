@@ -1,0 +1,28 @@
+<input name="arr_json" type="hidden" value=<%= @user_arr %> class='arr_json'/>
+
+
+<div id="txt">ここにデータを表示</div>
+<canvas id="result"></canvas>
+      
+<script>
+var arrJson = $('.arr_json').val();
+console.log(arrJson)
+var arr = JSON.parse(arrJson);
+console.log(arr.length)
+console.log(arr);
+$(function($) {
+    ctbar = document.getElementById("result").getContext("2d");
+    myBar = new Chart(ctbar, {
+        type: "line",    // ★必須　グラフの種類
+        data: {
+            labels:  frequencies,  // Ｘ軸のラベル
+            datasets: [
+                {
+                    label: "FFT",                            // 系列名
+                    data: amplitude                   // ★必須　系列Ａのデータ
+                }
+            ]
+        }
+    });
+})
+</script>

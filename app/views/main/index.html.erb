@@ -29,6 +29,7 @@ $(function($) {
         fftZ.calc(1, realZ, imaginaryZ)
         var phase = fftZ.phase(realZ, imaginaryZ);
         var frequencies = fftZ.frequencies(realZ, imaginaryZ, 10); //周波数
+        console.log("fre" + frequencies)
         var amplitude = fftZ.amplitude(realZ, imaginaryZ); //振幅
         var periods = fftZ.periods(realZ, imaginaryZ, 1);
         console.log(frequencies)
@@ -50,7 +51,7 @@ $(function($) {
         fftZ.calc( -1, realZ, imaginaryZ);
         var txt = document.getElementById("txt");  
         txt.innerHTML = "real: " + realZ + "<br>"       
-                    + "imaginary: " + imaginaryZ ;
+                    + "frequencies: " + frequencies ;
 console.log(fftZ)
         clearInterval(timer);
         $.ajax({
