@@ -5,7 +5,6 @@ class UsersController < ApplicationController
         user.datas = params[:datas]
         user.ffts = params[:ffts]
         user.save
-        console.log
         user.name = user.id
         user.save
         redirect_to user_path(user)
