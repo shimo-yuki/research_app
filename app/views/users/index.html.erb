@@ -16,21 +16,16 @@ $(function($) {
         type: "line",    // ★必須　グラフの種類
         data: {
             labels:  [0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0],  // Ｘ軸のラベ
-            datasets: [
-                {
-                    label: "1",                            // 系列名
-                    data: []                   // ★必須　系列Ａのデータ
-                }
-            ]
+            datasets: []
             
         }
     });
     for(var i = 0; i < arr.length; i++){
         console.log(arr[i].ffts);
 
-        myBar.data.datasets[0].data.push({
-          y: arr[i].ffts // like 'new Data('2018/4/12 03:21')'
-
+        myBar.data.datasets.push({
+          label: arr[i].name ,// like 'new Data('2018/4/12 03:21')'
+            data: arr[i].ffts
         });
         
       }
