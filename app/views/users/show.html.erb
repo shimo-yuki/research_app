@@ -1,10 +1,13 @@
 <input name="arr_json" type="hidden" value=<%= @user_arr %> class='arr_json'/>
  <canvas id="result"></canvas>
-    </div>
-</div>
+ <div id="txt">ここにデータを表示</div>
 
 <script>
 $(function($) {
+    const arrJson = $('.arr_json').val();
+    const arr = JSON.parse(arrJson);
+    var txt = document.getElementById("txt");  
+    txt.innerHTML = "fft: " + arr.ffts       
     ctbar = document.getElementById("result").getContext("2d");
     myBar = new Chart(ctbar, {
         type: "line",    // ★必須　グラフの種類
