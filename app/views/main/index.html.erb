@@ -11,6 +11,7 @@
 
 <script>
     
+
 $(function($) {
     $(document).on("click", "#start", function () {
         aZ = 0;
@@ -21,8 +22,13 @@ $(function($) {
         })
         timer = window.setInterval(() => {
             realZ.push(aZ)
+            displayData()
             console.log(aZ)
         }, 100); // 33msごとに（1秒間に約100回）
+        function displayData(){
+            var txt = document.getElementById("txt");
+            txt.innerHTML =  "z: " + aZ;
+        }
     })
 })
 var time = [], amp = []
