@@ -1,0 +1,22 @@
+<input name="arr_json" type="hidden" value=<%= @user_arr %> class='arr_json'/>
+ <canvas id="result"></canvas>
+    </div>
+</div>
+
+<script>
+$(function($) {
+    ctbar = document.getElementById("result").getContext("2d");
+    myBar = new Chart(ctbar, {
+        type: "line",    // ★必須　グラフの種類
+        data: {
+            labels:  [0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0],  // Ｘ軸のラベル
+            datasets: [
+                {
+                    label: "FFT",                            // 系列名
+                    data: arr.ffts                // ★必須　系列Ａのデータ
+                }
+            ]
+        }
+    });
+})
+</script>
