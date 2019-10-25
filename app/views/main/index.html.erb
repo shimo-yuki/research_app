@@ -16,7 +16,8 @@ $(function($) {
         aZ = 0;
         realZ = [],  imaginaryZ = [];
         window.addEventListener("devicemotion", (dat) => {
-        aZ = dat.acceleration.z; 
+        aZ = dat.acceleration.z;
+        console.log(aZ) 
         })
         timer = window.setInterval(() => {
             realZ.push(aZ)
@@ -27,10 +28,10 @@ $(function($) {
 var time = [], amp = []
 $(function($) {
     $(document).on("click", "#stop", function () {
-        for(i = 0; i < 36000; i++){
-            realZ.shift();
-            realZ.pop();
-        }
+        // for(i = 0; i < 36000; i++){
+        //     realZ.shift();
+        //     realZ.pop();
+        // }
         
         imaginaryZ = new Array(realZ.length);
         imaginaryZ.fill(0);
