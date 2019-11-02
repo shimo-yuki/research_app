@@ -35,7 +35,10 @@ var time = [], amp = []
 $(function($) {
     $(document).on("click", "#stop", function () {
 
-        
+        for(i = 0; i < 36000; i++){
+            realZ.shift();
+            realZ.pop();
+        }
         imaginaryZ = new Array(realZ.length);
         imaginaryZ.fill(0);
         originalZ = realZ.slice(0);  
