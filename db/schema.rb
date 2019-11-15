@@ -14,8 +14,8 @@ ActiveRecord::Schema.define(version: 2019_10_04_021417) do
 
   create_table "users", force: :cascade do |t|
     t.string "name"
-    t.text "datas"
-    t.text "ffts"
+    t.text "datas", limit: 4294967295
+    t.text "ffts", limit: 4294967295
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
