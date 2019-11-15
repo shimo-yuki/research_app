@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_15_061134) do
+ActiveRecord::Schema.define(version: 2019_10_04_021417) do
 
   create_table "users", force: :cascade do |t|
     t.string "name"
-    t.text "datas", limit: 1073741824
-    t.text "ffts", limit: 1073741824
+    t.text "datas", limit: 1000000000
+    t.text "ffts", limit: 1000000000
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
