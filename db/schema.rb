@@ -14,8 +14,8 @@ ActiveRecord::Schema.define(version: 2019_10_04_021417) do
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
-    t.text "datas"
-    t.text "ffts"
+    t.text "datas", size: :medium
+    t.text "ffts", size: :medium
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
