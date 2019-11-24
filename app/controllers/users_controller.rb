@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-
+    protect_from_forgery
     def index
         @users = User.all
         @user_arr = @users.to_json.html_safe
