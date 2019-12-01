@@ -8,6 +8,7 @@ $(function($) {
     const arr = JSON.parse(arrJson);
     var txt = document.getElementById("txt");  
     txt.innerHTML = "fft: " + arr.ffts       
+    console.log(ffts)
     ctbar = document.getElementById("result").getContext("2d");
     myBar = new Chart(ctbar, {
         type: "line",    // ★必須　グラフの種類
