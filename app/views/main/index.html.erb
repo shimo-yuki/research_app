@@ -72,7 +72,7 @@ console.log(fftZ)
             url: '/users',
             dataType: 'json',
             data : {
-                'datas[]': realZ,
+                'frequencies[]': frequencies,
                 'ffts[]': amplitude
             },
             success : function(data){
