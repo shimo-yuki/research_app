@@ -1,4 +1,4 @@
 class User < ApplicationRecord
-    serialize :datas
+    serialize :frequencies
     serialize :ffts
 end
