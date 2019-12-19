@@ -11,6 +11,7 @@ class UsersController < ApplicationController
     end
     def create
         user = User.new
+        binding.pry
         user.frequencies = params[:frequencies]
         user.ffts = params[:ffts]
         user.save
