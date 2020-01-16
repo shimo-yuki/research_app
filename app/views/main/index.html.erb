@@ -61,7 +61,33 @@ $(function($) {
                         data: amplitude                   // ★必須　系列Ａのデータ
                     }
                 ]
-            }
+            },
+            options: {
+                title: {                           //タイトル設定
+                    display: true,                 //表示設定
+                    fontSize: 18,                  //フォントサイズ
+                    text: 'Z軸方向成分の加速度'                //ラベル
+                },
+                scales: {
+                    yAxes: [{                      //y軸設定
+                        display: true,             //表示設定
+                        scaleLabel: {              //軸ラベル設定
+                        display: true,          //表示設定
+                        labelString: '加速度(m/s^2)',  //ラベル
+                        fontSize: 18               //フォントサイズ
+                        },
+                    }],
+                    xAxes: [{ 
+                        display: true,                //表示設定
+                            scaleLabel: {                 //軸ラベル設定
+                            display: true,             //表示設定
+                            labelString: '秒(s)',  //ラベル
+                            fontSize: 18               //フォントサイズ
+                            }, 
+                        }],
+                    },
+                }
+                
         });
 
         fftZ.calc( -1, realZ, imaginaryZ);
