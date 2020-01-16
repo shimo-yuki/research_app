@@ -59,8 +59,8 @@ $(function($) {
                     {
                         label: "FFT",                            // 系列名
                         data: amplitude                   // ★必須　系列Ａのデータ
-                    }
-                ]
+                    },
+                ],
             },
             options: {
                 title: {                           //タイトル設定
@@ -73,7 +73,7 @@ $(function($) {
                         display: true,             //表示設定
                         scaleLabel: {              //軸ラベル設定
                         display: true,          //表示設定
-                        labelString: '加速度(m/s^2)',  //ラベル
+                        labelString: '振幅(s^2/Hz)',  //ラベル
                         fontSize: 18               //フォントサイズ
                         },
                     }],
@@ -81,12 +81,12 @@ $(function($) {
                         display: true,                //表示設定
                             scaleLabel: {                 //軸ラベル設定
                             display: true,             //表示設定
-                            labelString: '秒(s)',  //ラベル
+                            labelString: '周波数(Hz)',  //ラベル
                             fontSize: 18               //フォントサイズ
                             }, 
                         }],
                     },
-                }
+                },
                 
         });
 
