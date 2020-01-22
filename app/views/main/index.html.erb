@@ -24,7 +24,7 @@ $(function($) {
             realZ.push(aZ)
             displayData()
             console.log(aZ)
-        }, 1000); // 33msごとに（1秒間に約100回）
+        }, 10); // 33msごとに（1秒間に約100回）
         function displayData(){
             var txt = document.getElementById("txt");
             txt.innerHTML =  "z: " + aZ;
