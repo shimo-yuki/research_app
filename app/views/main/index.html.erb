@@ -24,7 +24,7 @@ $(function($) {
             realZ.push(aZ)
             displayData()
             console.log(aZ)
-        }, 10); // 100ミリビョウ
+        }, 1); // 100ミリビョウ
         function displayData(){
             var txt = document.getElementById("txt");
             txt.innerHTML =  "z: " + aZ;
@@ -44,7 +44,7 @@ $(function($) {
             console.log(realZ)
         fftZ.calc(1, realZ, imaginaryZ)
         var phase = fftZ.phase(realZ, imaginaryZ);
-        var frequencies = fftZ.frequencies(realZ, imaginaryZ, 100); //周波数
+        var frequencies = fftZ.frequencies(realZ, imaginaryZ, 1000); //周波数
         console.log("fre" + frequencies)
         var amplitude = fftZ.amplitude(realZ, imaginaryZ); //振幅
         var periods = fftZ.periods(realZ, imaginaryZ, 1);
