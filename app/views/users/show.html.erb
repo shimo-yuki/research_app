@@ -64,7 +64,12 @@ var result = arr.frequencies.filter( function( value ) {
                             fontSize: 20,
                             beginAtZero: true,
                             callback: function(label, index, labels) {
+                                console.log('labels')
                                 console.log(labels);
+                                console.log('label')
+                                console.log(label);
+                                console.log('index')
+                                console.log(index)
                                 return label;
                             },
                             }
