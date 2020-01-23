@@ -9,7 +9,9 @@ $(function($) {
     var txt = document.getElementById("txt");  
     txt.innerHTML = "fft: " + arr.frequencies;
 var resultZ = [];
-var label = [0.25, 0.5, 0.75, 1.0, 1.25, 1.5, 1.75, 2.0];
+var resultF = [];
+var lab = [0.25, 0.5, 0.75, 1.0, 1.25, 1.5, 1.75, 2.0];
+var m=0;
 var result = arr.frequencies.filter( function( value ) {
 
     //5よりも小さい数値だけを抽出
@@ -64,13 +66,12 @@ var result = arr.frequencies.filter( function( value ) {
                             fontSize: 20,
                             beginAtZero: true,
                             callback: function(label, index, labels) {
-                                console.log('labels')
-                                console.log(labels);
-                                console.log('label')
-                                console.log(label);
-                                console.log('index')
-                                console.log(index)
-                                return label;
+                                
+                                if(label == lab[m]){
+                                    resultF.push(label)
+                                    m++;
+                                }
+                                return resultF;
                             },
                             }
             
