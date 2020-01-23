@@ -60,21 +60,16 @@ var result = arr.frequencies.filter( function( value ) {
                             labelString: '周波数(Hz)' ,               // 最大値
                             fontSize: 20
                             }, 
-                        ticks: {                       // 目盛り
+                        ticks: {   
+                            scaleOverride : true,                    // 目盛り
                             maxRotation: 0,
                             minRotation: 0 ,
                             fontSize: 20,
                             autoSkip: true,
                             stepSize: 0.25,
                             maxTicksLimit:9,
-                            beginAtZero: true,
-                            callback: function(label, index, labels) {
-                                
-                                if(label == lab[m]){
-                                    return label
-                                    m++;
-                                }
-                            },
+                            beginAtZero: true
+                        
                             }
             
                         }],
