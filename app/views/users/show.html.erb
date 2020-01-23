@@ -39,20 +39,26 @@ var result = arr.frequencies.filter( function( value ) {
                         scaleLabel: {              //軸ラベル設定
                         display: true,          //表示設定
                         labelString: '振幅(s^2/Hz)',  //ラベル
-                        fontSize: 18               //フォントサイズ
+                        fontSize: 20               //フォントサイズ
                         },
+                        ticks: {                       // 目盛り
+               
+                            fontSize: 20
+                            }
                     }],
                     xAxes: [{ 
                         display: true,                //表示設定
                         scaleLabel: {                 //軸ラベル設定
                             display: true,             //表示設定
-                            labelString: '周波数(Hz)'                // 最大値
+                            labelString: '周波数(Hz)' ,               // 最大値
+                            fontSize: 20
                             }, 
                         ticks: {                       // 目盛り
                             maxRotation: 0,
                             minRotation: 0 ,
-                             stepSize: 0.25                      // 最大値
-                        }
+                            maxTicksLimit: 9,
+                            fontSize: 20
+                            }
             
                         }],
                     },
