@@ -17,8 +17,9 @@ var result = arr.frequencies.filter( function( value ) {
 
     for(i = 0; i < result; i++){
             resultZ.push(result[i].toFixed(2));
+            console.log(resultZ);
+            console.log(result)
         }
-        console.log(resultZ);
     ctbar = document.getElementById("result").getContext("2d");
     myBar = new Chart(ctbar, {
         type: "line",    // ★必須　グラフの種類
