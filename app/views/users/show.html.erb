@@ -71,14 +71,9 @@ var result = arr.frequencies.filter( function( value ) {
                             callback: function(label, index, labels) {
                                 
                                 if(label == lab[m]){
-                                    resultF.push(label)
+                                    return label
                                     m++;
-                                    console.log('resultFF');
-                                    console.log(resultF);
                                 }
-                                console.log('resultF');
-                                console.log(resultF);
-                                return resultF;
                             },
                             }
             
