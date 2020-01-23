@@ -9,9 +9,9 @@ $(function($) {
     var txt = document.getElementById("txt");  
     txt.innerHTML = "fft: " + arr.frequencies       
     console.log(arr.frequencies)
-
-var result = arr.frequencies.filter( function( value ) {
  var resultZ = [];
+var result = arr.frequencies.filter( function( value ) {
+
     //5よりも小さい数値だけを抽出
     return value < 2;
 })
