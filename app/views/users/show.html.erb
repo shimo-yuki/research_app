@@ -52,14 +52,16 @@ var result = arr.frequencies.filter( function( value ) {
                             }
                     }],
                     xAxes: [{ 
-                         scaleOverride : true,
+                        scaleOverride : true,
                         display: true,                //表示設定
                         scaleLabel: {                 //軸ラベル設定
                             display: true,             //表示設定
                             labelString: '周波数(Hz)' ,               // 最大値
                             fontSize: 20
                             }, 
-                        ticks: {            
+                        ticks: {                       // 目盛り
+                            maxRotation: 0,
+                            minRotation: 0 ,
                             fontSize: 20,
                             beginAtZero: true,
                             callback: function(label, index, labels) {
