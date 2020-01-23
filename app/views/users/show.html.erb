@@ -7,8 +7,7 @@ $(function($) {
     const arrJson = $('.arr_json').val();
     const arr = JSON.parse(arrJson);
     var txt = document.getElementById("txt");  
-    txt.innerHTML = "fft: " + arr.frequencies       
-    console.log(arr.frequencies)
+    txt.innerHTML = "fft: " + arr.frequencies;
  var resultZ = [];
 var result = arr.frequencies.filter( function( value ) {
 
@@ -18,6 +17,7 @@ var result = arr.frequencies.filter( function( value ) {
     for(i = 0; i < result; i++){
             resultZ.push(result.toFixed(2));
         }
+        console.log(resultZ);
     ctbar = document.getElementById("result").getContext("2d");
     myBar = new Chart(ctbar, {
         type: "line",    // ★必須　グラフの種類
