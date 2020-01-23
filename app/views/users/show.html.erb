@@ -16,7 +16,9 @@ var result = arr.frequencies.filter( function( value ) {
 })
 
     for(i = 0; i < result.length; i++){
-            console.log(result[i])
+            resultZ.push(Math.floor((result[i] * 100)) / 100);
+);
+            console.log(resultZ);\
         }
     ctbar = document.getElementById("result").getContext("2d");
     myBar = new Chart(ctbar, {
