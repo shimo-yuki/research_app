@@ -15,6 +15,9 @@ var result = arr.frequencies.filter( function( value ) {
     //5よりも小さい数値だけを抽出
     return value < 2;
 })
+    for(i = 0; i < result; i++){
+            result.pus(result.toFixed(2));
+        }
     ctbar = document.getElementById("result").getContext("2d");
     myBar = new Chart(ctbar, {
         type: "line",    // ★必須　グラフの種類
