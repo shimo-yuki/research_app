@@ -8,16 +8,19 @@ $(function($) {
     const arr = JSON.parse(arrJson);
     var txt = document.getElementById("txt");  
     txt.innerHTML = "fft: " + arr.frequencies;
- var resultZ = [];
+
 var result = arr.frequencies.filter( function( value ) {
 
     //5よりも小さい数値だけを抽出
     return value < 2;
 })
-    for(i = 0; i < result; i++){
-            resultZ.push(result.toFixed(2));
-        }
-        console.log(resultZ);
+
+var resultZ = arr.frequencies.push( function( value ) {
+
+    //5よりも小さい数値だけを抽出
+    return value.toFixed(2) ;
+})
+        console.log(result);
     ctbar = document.getElementById("result").getContext("2d");
     myBar = new Chart(ctbar, {
         type: "line",    // ★必須　グラフの種類
