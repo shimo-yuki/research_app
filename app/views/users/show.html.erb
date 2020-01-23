@@ -17,7 +17,7 @@ var result = arr.frequencies.filter( function( value ) {
     //5よりも小さい数値だけを抽出
     return value <= 2.0;
 })
-
+console.log(result.length);
     for(i = 0; i < result.length; i++){
             resultZ.push(Math.floor((result[i] * 100)) / 100);
         }
@@ -60,16 +60,22 @@ var result = arr.frequencies.filter( function( value ) {
                             labelString: '周波数(Hz)' ,               // 最大値
                             fontSize: 20
                             }, 
-                        ticks: {   
-                            scaleOverride : true,                    // 目盛り
+                        ticks: {
+                            scaleOverride : true,                       // 目盛り
                             maxRotation: 0,
                             minRotation: 0 ,
                             fontSize: 20,
                             autoSkip: true,
                             stepSize: 0.25,
                             maxTicksLimit:9,
-                            beginAtZero: true
-                        
+                            beginAtZero: true,
+                            callback: function(label, index, labels) {
+                                
+                                if(label == lab[m]){
+                                    label
+                                    m++;
+                                }
+                            },
                             }
             
                         }],
